@@ -1,11 +1,9 @@
-/* Global reset: remove default browser spacing and enable border-box sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Overall page canvas: center cards on a soft neutral background */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -16,7 +14,6 @@ body {
     padding: 20px;
 }
 
-/* Horizontal layout for the pricing cards */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -26,7 +23,6 @@ body {
     align-items: flex-start;
 }
 
-/* Single pricing card shell */
 .card {
     display: flex;
     flex-direction: column;
@@ -38,13 +34,11 @@ body {
     flex-shrink: 0;
 }
 
-/* Stack for card title, price, and feature content */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
-/* Plan name styling */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -53,7 +47,6 @@ body {
     margin-bottom: 8px;
 }
 
-/* Price row: amount + per-month label */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -61,38 +54,32 @@ body {
     align-items: baseline;
 }
 
-/* Numeric price emphasis */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
-/* Small "/mo." label styling */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
-/* Container for "Includes" label and feature list */
 .card-content {
     margin-bottom: 32px;
 }
 
-/* Section label above the feature bullets */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
-/* Unstyled list wrapper for plan features */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
-/* Single feature row with checkmark + label */
 .features-list li {
     display: flex;
     align-items: center;
@@ -101,7 +88,6 @@ body {
     color: #26251e;
 }
 
-/* Visual check icon column */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -109,7 +95,6 @@ body {
     font-weight: 400;
 }
 
-/* Base styling for all call‑to‑action buttons */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -124,33 +109,27 @@ body {
     transition: background-color 0.2s ease;
 }
 
-/* Soft hover state for secondary button */
 .download-button:hover {
     background-color: #D8D6CE;
 }
 
-/* Active press feedback for secondary button */
 .download-button:active {
     background-color: #D8D6CE;
 }
 
-/* Primary button variant used on the Pro plan */
 .download-button.primary {
     background-color: #111;
     color: #fff;
 }
 
-/* Stronger hover for the primary action */
 .download-button.primary:hover {
     background-color: #333;
 }
 
-/* Active state mirrors hover to keep interaction simple */
 .download-button.primary:active {
     background-color: #333;
 }
 
-/* Floating pill label that identifies the HTML/JSX version */
 .page-label {
     position: fixed;
     top: 16px;
@@ -164,7 +143,6 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* Slight emphasis on the "HTML version" label */
 .page-label strong {
     color: #333;
 }
