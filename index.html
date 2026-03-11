@@ -1,25 +1,38 @@
 <!DOCTYPE html>
+<!-- Tells the browser this is an HTML5 document -->
 <html lang="en">
 <head>
+    <!-- Basic page metadata and responsive layout settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The text that appears in the browser tab -->
     <title>Pricing Plans — HTML version</title>
+    <!-- Load the Inter font from Google Fonts before we load our styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Our main stylesheet that controls layout, spacing, colors, etc. -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Small label at the top so we know this is the plain HTML version -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+    <!-- Flex container that holds both pricing cards side‑by‑side (see styles.css) -->
     <div class="cards-container">
+        <!-- First pricing card: Hobby plan -->
         <div class="card">
+            <!-- Top section: title, price, and feature list are grouped together -->
             <div class="card-top">
+                <!-- Plan name -->
                 <h3 class="card-title">Hobby</h3>
+                <!-- Price line. This plan is free so there is only one span -->
                 <p class="card-price">
                     <span class="card-price-amount">Free</span>
                 </p>
+                <!-- Main content area for the card: section label + feature list -->
                 <div class="card-content">
                     <p class="includes-text">Includes:</p>
+                    <!-- Bullet list of features. Each item has a checkmark icon and some text -->
                     <ul class="features-list">
                         <li>
                             <span class="checkmark">✓</span>
@@ -36,11 +49,16 @@
                     </ul>
                 </div>
             </div>
+            <!-- Call‑to‑action button for this card.
+                 The "secondary" class gives it a lighter visual style than "primary". -->
             <button class="download-button secondary">Download</button>
         </div>
+
+        <!-- Second pricing card: Pro plan -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>
+                <!-- Price line. This one has both an amount and a "per month" label -->
                 <p class="card-price">
                     <span class="card-price-amount">$20</span>
                     <span class="card-price-period">/mo.</span>
@@ -67,6 +85,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- Primary button: visually stronger to draw attention to the paid plan -->
             <button class="download-button primary">Get Pro</button>
         </div>
     </div>

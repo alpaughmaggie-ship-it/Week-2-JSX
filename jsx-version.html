@@ -1,15 +1,24 @@
 <!DOCTYPE html>
+<!-- Same UI as index.html, but rendered with React + JSX instead of static HTML -->
 <html lang="en">
 <head>
+    <!-- Standard HTML metadata so the page renders correctly and is responsive -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans — JSX version</title>
+
+    <!-- Re‑use the same CSS as the plain HTML version for a fair comparison -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- React and ReactDOM UMD builds loaded from a CDN (development versions) -->
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Babel lets the browser understand JSX directly in this small demo file -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
 </head>
 <body>
+    <!-- React will take over this empty div and render our component tree inside it -->
     <div id="root"></div>
     <script type="text/babel" data-type="module">
         // Components can be used INSIDE other components — this is called "composition"
@@ -57,9 +66,13 @@
                 title: 'Hobby',
                 price: 'Free',
                 includesText: 'Includes:',
-                features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
+                features: [
+                    'No credit card required', 
+                    'Limited Agent requests', 
+                    'Limited Tab completions',
+                ],
                 buttonText: 'Download',
-                buttonVariant: 'secondary',
+                buttonVariant: 'tertiary',
             };
             const proPlan = {
                 title: 'Pro',
@@ -72,7 +85,17 @@
                     'Maximum context windows',
                 ],
                 buttonText: 'Get Pro',
-                buttonVariant: 'primary',
+                buttonVariant: 'secondary',
+            };
+            const orgPlan = {
+                title: 'Org',
+                price: '$30/mo.',
+                includesText: 'Everything in Pro, plus:',
+                features: [
+                    'Team management',
+                ],
+                buttonText: 'Get Org',
+                buttonVariant: 'primary',   
             };
 
             return (
@@ -84,6 +107,7 @@
                         {/* This is the same as writing: title="Hobby" price="Free" includesText="Includes:" etc. */}
                         <PricingCard {...hobbyPlan} />
                         <PricingCard {...proPlan} />
+                        <PricingCard {...orgPlan} />
                     </div>
                 </>
             );
